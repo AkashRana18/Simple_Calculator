@@ -1,11 +1,9 @@
-
-
 body {
-    background: linear-gradient(-30deg, white, black);
+    background: linear-gradient(135deg, #3494E6, #EC6EAD);
+    background-size: cover;
+    overflow: hidden;
     animation: move 15s linear infinite;
     background-size: 400%;
-    overflow: hidden;
-
 }
 
 @keyframes move {
@@ -21,16 +19,33 @@ body {
         background-position: 0% 50%;
     }
 }
-.top{
-    text-align: center;
-    color: rgb(171, 159, 159);
-}
 
 .container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.calculator-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: linear-gradient(to right, #3494E6, #EC6EAD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.author-name {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 10px;
 }
 
 input {
@@ -56,16 +71,22 @@ input {
     border-radius: 27px;
     background: black;
     box-shadow: 0px -2px 5px 0px #5a5a5a, 0px 2px 5px 2px black;
-    
+
 }
 
 button {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     border-radius: 24px;
     border: none;
     height: 59px;
     width: 59px;
     font-size: x-large;
     cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
 }
 
 .first {
@@ -78,4 +99,24 @@ button {
 
 button:active {
     background: rgb(144, 144, 199);
+}
+
+/* responsive design */
+@media screen and (max-width: 768px) {
+    .calculator {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+input {
+    text-align: center;
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1150px) {
+    .calculator {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

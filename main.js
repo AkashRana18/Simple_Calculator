@@ -3,7 +3,7 @@ function allclear() {
     display.value = " ";
 }
 
-function clear() {
+function clearEntry() {
     display.value = display.value.slice(0, -1);
 }
 
@@ -14,3 +14,4 @@ function show(n) {
 function calc() {
     display.value = eval(display.value);
 }
+
